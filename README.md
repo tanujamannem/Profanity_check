@@ -28,7 +28,7 @@ Better Profanity for Profanity Check
 
 **Explanation:** Collected Data contains above one lakh rows with 2 columns.i.e. Is_offensive, text. Data contains unneccesary information like smileys, numbers and all. 
 cleaned the data by importing ntlk libraries and removed all punctuations, smileys, etc.
-Dataset is very large. Not possible to train all columns. For time being extracted 10000 rows from the dataset for furthur process.
+Dataset is very large. Not possible to train all rows. For time being extracted 10000 rows from the dataset for furthur process.
 
 Splitted the data into train and test for building the model. CountVectorizer class is imported from scikit-learn's sklearn.feature_extraction.text module. 
 This object will be used to convert the input text data into a count matrix representation. The fit_transform() method of the CountVectorizer object is used to convert 
@@ -41,4 +41,4 @@ learned vocabulary.
 
 Building and fitted the DecisionTreeClassifier Model and predicted the test data. got **80%** F1 Score and **87%** Auroc Score and plotted the confusion matrix and roc
 plot. The next step is to check profanity. for this used better profanity from profanity check and created function to remove profanity check. Applied to all 10000 rows 
-in the dataset. Got the final output. The bad words are removed and replaced with '#####'.
+in the dataset. Got the final output. The bad words are removed and replaced with '#'.
